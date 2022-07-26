@@ -1,0 +1,39 @@
+﻿@using WebApplication2.Models
+@model  List<Employee>
+
+
+<h3>Welcome to Index Page</h3>
+<hr/>
+
+@* 
+    <h3> @ViewBag.Message </h3>  
+*@
+
+<a href="/Product/Create">Create New</a>
+
+<table border="2" width="600">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Salary</th>
+        <th>Job Profile</th>
+        <th></th>
+    </tr>
+
+    @foreach(Employee item in Model)
+    {
+         <tr>
+            <td>@item.Emp_Id</td>
+            <td>@item.Emp_Name</td>
+            <td>@item.Salary</td>
+            <td>@item.Job</td>     
+            <td>
+                <a href="/Product/Details/@item.Emp_Id">Details</a> ||
+                <a href="/Product/Edit/@item.Emp_Id">Edit</a> ||
+                <a href="/Product/Delete/@item.Emp_Id">Delete</a>  
+            </td>
+         </tr>
+    }
+
+   
+</table>

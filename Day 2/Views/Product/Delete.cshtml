@@ -1,0 +1,21 @@
+﻿@using WebApplication2.Models
+@model  Employee
+
+
+<h3>Are you sure you want to delete this Employee Details</h3>
+
+
+<div>
+    Employee Id   :  @Model.Emp_Id  <br/>
+    Employee Name :  @Model.Emp_Name  <br/>
+    Salary        :  @Model.Salary<br/>
+    Job Profile   :  @Model.Job<br/>
+</div>
+
+<form  action="/Product/Delete" method="post">
+     <input name="id" type="hidden" value="@Model.Emp_Id" />
+     <input type="submit" value="Delete" />
+</form>
+
+<hr/>
+ <a href="/Product/Index">Back to List</a>
