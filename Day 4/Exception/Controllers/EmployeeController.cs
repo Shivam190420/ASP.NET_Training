@@ -12,9 +12,9 @@ namespace WebApplication1.Controllers
     {
         IEmployee_repo _repository;
 
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<EmployeeController > _logger;
 
-         public EmployeeController(IEmployee_repo repository, ILogger<HomeController> logger)
+         public EmployeeController(IEmployee_repo repository, ILogger<EmployeeController > logger)
         {
             _logger = logger;
             _repository = repository;
