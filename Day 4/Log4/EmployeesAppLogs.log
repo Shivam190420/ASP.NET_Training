@@ -1,0 +1,17 @@
+INFO  03:23:20 Now listening on: https://localhost:7012
+INFO  03:23:20 Now listening on: http://localhost:5012
+INFO  03:23:20 Application started. Press Ctrl+C to shut down.
+INFO  03:23:20 Hosting environment: Development
+INFO  03:23:20 Content root path: C:\Users\Administrator\Desktop\ASP\Day 4\WebApplication1\WebApplication1\
+INFO  03:23:55 Index Action is Processed.
+ERROR 03:23:55 Error Message
+INFO  03:23:55 Index Action is Processed.
+ERROR 03:23:55 Error Message
+INFO  03:23:58 Entity Framework Core 6.0.7 initialized 'EmployeeDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+INFO  03:23:58 Entity Framework Core 6.0.7 initialized 'EmployeeDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+INFO  03:24:01 Executed DbCommand (164ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Deptno], [e].[Emp_Name], [e].[Job], [e].[Salary]
+FROM [Employees] AS [e]
+INFO  03:24:01 Executed DbCommand (164ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Deptno], [e].[Emp_Name], [e].[Job], [e].[Salary]
+FROM [Employees] AS [e]

@@ -1,0 +1,94 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models;
+using WebApplication1.Repositries;
+using log4net;
+using System.Diagnostics;
+
+namespace WebApplication1.Controllers
+{
+    public class EmployeeController : Controller
+    {
+        IEmployee_repo _repository;
+
+        private readonly ILogger<HomeController> _logger;
+
+         public EmployeeController(IEmployee_repo repository, ILogger<HomeController> logger)
+        {
+            _logger = logger;
+            _repository = repository;
+        }
+
+        public IActionResult Index()
+        {
+            _logger.LogInformation("Index Action is Processed.");
+            _logger.LogError("Error Message");
+            List<Employee> stList = _repository.GetAllEmployee();
+            return View(stList);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Employee obj)
+        {
+            _repository.AddEmployee(obj);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int id)
+        {
+            Employee obj = _repository.GetEmployeeById(id);
+            return View(obj);
+        }
+
+        
+        public IActionResult Details_job(string id)
+        {
+            IEnumerable <Employee> obj = _repository.GetEmployeebyjob(id);
+            return View(obj);
+        }
+
+        
+        public IActionResult Details_dept(int id)
+        {
+            IEnumerable<Employee> obj = _repository.GetEmployeebydeptno(id);
+            return View(obj);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Employee obj = _repository.GetEmployeeById(id);
+            return View(obj);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Employee obj)
+        {
+            _repository.UpdateEmployee(obj);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Employee obj = _repository.GetEmployeeById(id);
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public IActionResult DeleteConfirm(int id)
+        {
+            _repository.DeleteEmployee(id);
+            return RedirectToAction("Index");
+        }
+    }
+}
+

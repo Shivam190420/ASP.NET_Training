@@ -1,0 +1,13 @@
+INFO  11:33:26 Now listening on: https://localhost:7012
+INFO  11:33:26 Now listening on: http://localhost:5012
+INFO  11:33:26 Application started. Press Ctrl+C to shut down.
+INFO  11:33:26 Hosting environment: Development
+INFO  11:33:26 Content root path: C:\Users\Administrator\Desktop\ASP\Day 4\WebApplication1\WebApplication1\
+INFO  11:33:31 Index Action is Processed.
+ERROR 11:33:31 Error Message
+INFO  11:33:34 Entity Framework Core 6.0.7 initialized 'EmployeeDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+INFO  11:33:37 Executed DbCommand (142ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Deptno], [e].[Emp_Name], [e].[Job], [e].[Salary]
+FROM [Employees] AS [e]
+ERROR 11:34:06 Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+ERROR 11:34:40 Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')

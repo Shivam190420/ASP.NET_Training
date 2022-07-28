@@ -1,0 +1,2 @@
+All the process was same just return type is changed to IEnumerable..
+and view created are of list type..
